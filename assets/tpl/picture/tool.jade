@@ -1,0 +1,20 @@
+form
+  div.pair.inline.nonwidth
+    input.smallwidth(id='create-bucket', name='create-bucket', type="checkbox", value='true', data-description='Bucket erstellen')
+
+  div.pair.inline
+    input.smallwidth(id='auto-upload', name='auto-upload', type="checkbox", value='true', checked, data-description='Upload im Hintergrund')
+
+form.create-bucket.nonwidth
+
+  div.pair.hint--right.create-bucket(data-hint="Name")
+    input.fullwidth(id="name", name='name', required, value='#{name ? name : ''}', placeholder='Name', class="#{missing_name? 'missing' : ''}")
+
+  div.pair.hint--right.create-bucket(data-hint="Beschreibung")
+    textarea.fullwidth(id="description", name='description', value='#{description ? description : ''}', placeholder='Beschreibung', class="#{missing_description ? 'missing' : ''}")
+
+  div.pair.hint--right.create-bucket(data-hint="Tags")
+    input.fullwidth(id="tags", required, name='tags', value='#{tags ? tags : ''}', placeholder='Tags erlauben es Nutzern schnell und einfach gewünschte Alben zu finden (Tag1, Tag2, ...)', class="#{missing_tags ? 'missing' : ''}")
+
+  div.pair
+    button.fullwidth(type="submit") Bucket anlegen

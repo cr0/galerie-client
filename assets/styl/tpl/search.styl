@@ -1,0 +1,127 @@
+#home
+  //background: linear-gradient(top, #83F080, #FF7E40)
+  //background: white
+
+  div.results
+    overflow-y: auto
+    height: 100%
+
+    div.search
+      display: inline-block
+      position: relative
+      width: 33em
+      height: 35em
+      background-color: transparent
+      vertical-align:top
+      float: left
+      padding: 2em
+      text-align: center
+
+      & > div
+        position: fixed
+        width: 35%
+
+      a
+        color: rgb(247,80,90)
+        transition: color 0.3s ease-in-out
+        text-decoration: none
+
+        &:hover
+          color: rgb(249,128,136)
+
+      .query
+        height: 160px
+        width: 100%
+        overflow-y: visible
+
+        textarea
+          z-index: 10
+          position: relative
+          background-color: rgba(247,80,90,.95)
+          color: white
+          font-size: 2.5em
+          width: 100%
+          padding: 0.2em 0.4em
+          line-height: 0.9em
+          height: 1.2em
+          transition: height 0.3s linear
+
+      .stats, .additional
+        text-transform: uppercase
+        width: 100%
+
+        p
+          display: block
+
+
+      .stats
+        font-size: 2em
+
+        p
+          font-weight: 100
+
+          &.more
+            font-size: 0.5em
+            font-weight: 200
+            margin-top: 1em
+
+        strong
+          //font-size: 1.3em
+          font-weight: 400
+
+      .additional
+        margin-top: 2em
+
+        a, p
+          font-weight: 200
+          font-size: 0.9em
+          display: block
+
+          i, img
+            width: 0.9em
+            margin-right: 0.4em
+
+          &.user img
+            height: 0.9em
+
+        p
+          margin-bottom: 1em
+
+          a
+            display: inline
+
+
+    div.result-item
+      display: inline-block
+      width: 300px
+      height: 280px
+      background: center center url('/img/load.gif') no-repeat
+      // background-size: cover
+      color: transparent
+      //transition: background-color 0.6s ease-in-out, background-image 0.6s ease-in-out
+      transition: opacity 0.6s ease-in-out
+      text-align: center
+      padding: 5em 2em 0 2em
+      font-size: 1.3em
+      text-transform: uppercase
+      position: relative
+      z-index: 100
+
+      .inactive
+        opacity: 0.3 !important
+
+      &:hover
+        background-image: none !important
+        background-color: white
+        color: black
+        cursor: pointer
+        opacity: 1 !important
+        transition: opacity 0
+
+        div.name
+          font-weight: 200
+          color: rgba(247,80,90,.95)
+
+        div.info
+          font-weight: 100
+

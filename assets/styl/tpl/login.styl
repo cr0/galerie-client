@@ -1,0 +1,37 @@
+#login
+  background: linear-gradient(top, #50e9c5, #5fc9fb)
+
+  ul
+    margin-top: 2em
+
+  li
+    width: 10em
+    height: 10em
+    display: inline-block
+    margin-right: 2em
+    position: relative
+
+    &.google
+      background: linear-gradient(top, #dd4c39, darken(#dd4c39, 6))
+      &:hover
+        background: linear-gradient(top, lighten(#dd4c39, 8), #dd4c39)
+
+    &.facebook
+      background: linear-gradient(top, #4c67a1, darken(#4c67a1, 6))
+      &:hover
+        background: linear-gradient(top, lighten(#4c67a1, 8), #4c67a1)
+
+    &.amazon
+      background: linear-gradient(top, #ff9900, darken(#ff9900, 6))
+      &:hover
+         background: linear-gradient(top, lighten(#ff9900, 8), #ff9900)
+
+    
+    a 
+      position: absolute
+      bottom: .25em
+      left: .5em
+      font-size: 140%
+      font-weight: 100
+      color: white
+      cursor: pointer

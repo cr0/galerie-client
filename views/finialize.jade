@@ -1,0 +1,36 @@
+extends layout/multi
+
+block css
+  link(rel='stylesheet', href='/css/finalize.css')
+
+block js
+  script(type='text/javascript').
+    if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function() {}, function() {});
+
+block body
+  h1 Hi #{name}
+  p.info Du meldest dich zum ersten Mal über einen externen Anbieter an. Bitte ergänze die restlichen Felder.
+  p.geo Um dir Alben in deiner Umgebung vorzuschlagen, wirst du von deinem Browser möglicherweise gefragt, ob du deinen Standort freigeben willst. 
+
+  div.image
+    img(src="#{avatar.url}")
+    p avatar provided by #{avatar.provider}
+
+  form(action='/auth/finalize', method='post')
+    div.pair
+      input.fullwidth(readonly, name='name', value='#{name}')
+
+    div.pair
+      input.fullwidth(readonly, type='email', required, name='email', value='#{email}', placeholder='Email-Adresse')
+
+    div.pair.hint--right(data-hint="Nickname")
+      input.fullwidth(id="username", name='username', required, value='#{username ? username : ''}', placeholder='Nickname', class="#{missing_username ? 'missing' : ''}")
+
+    div.pair.hint--right(data-hint="Geburtstag")
+      input.fullwidth(id="birthday", name='birthday', required, type='date', value='#{birthday}', placeholder='Geburtstag', class="#{missing_birthday ? 'missing' : ''}") 
+
+    div.pair
+      input(name='_id', type='hidden', value='#{_id}')
+      button Zugang anlegen
+
+

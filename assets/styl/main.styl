@@ -1,0 +1,78 @@
+@import "nib"
+global-reset()
+
+@import "../../public/components/font-awesome/css/font-awesome.css"
+@import "vendor/hint.css"
+
+@import "_variables"
+
+@import "common/animation"
+@import "common/forms"
+@import "common/buttons"
+
+@import "structure/header"
+@import "structure/content"
+@import "structure/footer"
+@import "structure/horizontal-scroll"
+
+@import "tpl/login"
+@import "tpl/imprint"
+@import "tpl/search"
+@import "tpl/gallery"
+@import "tpl/picture"
+@import "tpl/error"
+
+*
+  box-sizing: border-box
+
+  &:focus
+    outline: 0
+
+:root
+  height: 100%
+
+body
+  font: 1em "Helvetica Neue", Arial, sans-serif
+  font-weight: 200
+  color: $text-color
+
+  background-color: $background-color
+  overflow: hidden
+
+a
+  color: $link-color
+  text-decoration: none
+
+a.button
+  color: #00B7FF
+
+h1
+  font-size: 2em
+  font-weight: 100
+
+h2
+  font-size: 1.5em
+  font-weight: 100
+
+h3
+  font-size: 1.15em
+  font-weight: 200
+
+p
+  margin-top: 1%
+
+pre
+  font: 1em Consolas, "Courier New", serif
+  margin-top: 0.5%
+  margin-bottom: 0.5%
+  border-left: 2px solid
+  padding-left: 1%
+
+.clearfix
+  clearfix()
+
+.inline
+  display: inline-block
+
+.float-left
+  float: left

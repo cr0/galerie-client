@@ -1,0 +1,43 @@
+{
+  "name": "galerie-client",
+  "version": "0.0.0",
+  "homepage": "https://github.com/cr0/galerie-client",
+  "authors": [
+    "Christian Roth <christian.roth@port17.de>"
+  ],
+  "description": "a client for the galerie-api",
+  "main": "index.html",
+  "keywords": [
+    "gallery",
+    "node",
+    "rest",
+    "chaplin"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chaplin": "1.0.x",
+    "jade": "1.1.x",
+    "requirejs-plugins": "1.0.x",
+    "font-awesome": "4.0.x",
+    "requirejs": "2.1.x",
+    "moment": "2.5.x",
+    "jquery": "2.1.x",
+    "lodash": "2.4.x",
+    "jquery-file-upload": "9.5.x",
+    "backbone": "1.1.x",
+    "backbone-relational": "0.8.x",
+    "backbone.stickit": "0.7.x",
+    "backbone-fetch-cache": "1.4.x",
+    "modernizr": "2.7.x",
+    "jquery-mousewheel": "3.1.x",
+    "jquery-cookie": "~1.4.0"
+  }
+}

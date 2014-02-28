@@ -1,0 +1,1 @@
+# node-galerie [![Build Status](https://travis-ci.org/cr0/node-galerie.png?branch=master)](https://travis-ci.org/cr0/node-galerie) [![Coverage Status](https://coveralls.io/repos/cr0/node-galerie/badge.png)](https://coveralls.io/r/cr0/node-galerie) [![Dependency Status](https://gemnasium.com/cr0/node-galerie.png)](https://gemnasium.com/cr0/node-galerie)

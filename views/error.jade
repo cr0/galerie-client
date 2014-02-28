@@ -1,0 +1,10 @@
+extends layout/multi
+
+block css
+  link(rel='stylesheet', href='/css/error.css')
+
+block body
+  h1 ##{code} &mdash; #{name}
+  p.info= message
+
+  pre.stack= stack

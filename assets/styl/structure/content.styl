@@ -1,0 +1,47 @@
+
+
+#content
+  width: 100%
+
+.skeleton
+  width: inherit
+  height: 100%
+
+  a
+    color: black
+    &:hover
+      text-decoration: underline
+
+// .pt-page > div
+//    height: inherit
+
+.fullsize
+  width: 100%
+  height: 100%
+
+.nonwidth
+  & > div
+    width: 80%
+    margin: 4em auto
+
+@media (min-width: 500px) and (max-width: 650px)
+  .nonwidth
+    & > div
+      width: 500px
+
+@media (max-width: 500px)
+  .nonwidth
+    & > div
+      width: 100%
+
+@media (max-height: 500px)
+  .nonwidth
+    & > div
+      margin: 1.5em auto
+
+div.pair
+  width: 100%
+
+  &.inline
+    display: inline
+    width: auto

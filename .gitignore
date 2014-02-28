@@ -1,0 +1,8 @@
+.test
+doc
+node_modules
+public/css
+public/js
+.codecov.js
+public/components
+public/fonts

@@ -1,0 +1,60 @@
+
+div.image(style="background-image: url('/i/#{sources.low.name}');", data-original="/i/#{sources.standard.name}", data-blur="/i/#{sources.blur.name}", data-name="#{name}", data-height="#{sources.standard.height}", data-width="#{sources.standard.width}")
+
+div.meta
+  span.description #{name}
+
+div.admin
+  ul.toolbar
+
+    li.date.hint--top(data-hint="#{date.formatted_created}")
+      div.icon.entypo.calendar
+      div.content
+        h2 Aufnahmedatum
+        p #{date.formatted_created} &mdash; 
+          a.created(href="#") nicht korrekt?
+        h2 Uploaddatum
+        p #{date.formatted_uploaded}
+
+
+    li.location.hint--top(data-hint="#{location.address}")
+      if location.lat
+        div.icon.entypo.globe(data-link="location")
+        div.content
+          h2 Addresse
+          p #{location.address}
+      else
+        div.icon.entypo.globe.missing(data-link="location")
+        div.content
+          h2 Addresse
+          p Keine Addresse hinterlegt &mdash;
+            a(href="#") hinzufügen?
+
+
+    li.tags.hint--top(data-hint="#{joined_tags}")
+      div.icon.entypo.tag(data-link="tags")
+        span.badge= num_tags
+      div.content
+        h2 Tags
+        ul.taglist
+          each tag, i in tags
+            li
+              a(href="/api/tag/#{tag._id}/pictures") #{tag._id}
+          input.tagselector
+
+
+    li.buckets.hint--top(data-hint="Zugeordnete Buckets")
+      div.icon.entypo.bucket(data-link="buckets")
+        span.badge= num_buckets
+      div.content
+        h2 Buckets
+        p Keine Buckets
+
+
+    li.buckets.hint--top(data-hint="#{from.name}")
+      div.icon.entypo.user(data-link="creator")
+        span.badge= from.reputation
+      div.content
+        h2 Ersteller
+        p
+          a(href="/user/#{from._id}", title="Profil anzeigen") #{from.name}

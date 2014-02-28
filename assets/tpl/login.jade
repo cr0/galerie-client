@@ -1,0 +1,16 @@
+
+h1 Login
+p
+  | Melde dich mithilfe eines Drittanbieters an.
+
+
+ul.login-provider
+
+  li.amazon
+    a(href='#{apiRoot}auth/amazon/?origin=#{origin}', title='Login with Amazon') Amazon
+
+  li.facebook
+    a(href='#{apiRoot}/auth/facebook/?origin=#{origin}', title='Login with Facebook') Facebook
+
+  li.google
+    a(href='#{apiRoot}/auth/google_oauth2/?origin=#{origin}', title='Login with Google') Google
